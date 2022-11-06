@@ -7,7 +7,7 @@ import createTransaction from "../create_transaction";
 import db from "../db";
 import { DBError, UnavailableEmailError, UnavailableHandleError } from "../error";
 import Follow from "../follow/follow";
-import FollowData from "../follow/Follow_data";
+import FollowData from "../follow/follow_data";
 import Like from "../like/like";
 import profileModelManager from "../profile";
 import Profile from "../profile/profile";
