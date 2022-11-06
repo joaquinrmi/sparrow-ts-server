@@ -46,15 +46,12 @@ class App
             api_secret: process.env.CLOUD_API_SECRET
         });
 
-        if(process.env.NODE_ENV !== "production")
-        {
-            this.app.use(cors({
-                origin: [
-                   "http://localhost:3000"
-                ],
-                credentials: true
-            }));
-        }
+        this.app.use(cors({
+            origin: [
+                process.env.CLIENT_APP
+            ],
+            credentials: true
+        }));
 
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: false }));
