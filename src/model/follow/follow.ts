@@ -1,7 +1,7 @@
 import { Model, InferAttributes, InferCreationAttributes, DataTypes } from "sequelize";
 import db from "../db";
 import User from "../user/user";
-import FollowData from "./Follow_data";
+import FollowData from "./follow_data";
 
 class Follow extends Model<InferAttributes<Follow>, InferCreationAttributes<Follow>> implements FollowData
 {
