@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import ModelError, { ModelErrorType } from "../../model/error";
 import profileModelManager from "../../model/profile";
-import { InternalServerErrorResponse, InvalidUpdateProfileFormResponse, ProfileDoesNotExistResponse } from "../error_response";
+import { InternalServerErrorResponse, InvalidGetProfileParamsResponse, InvalidUpdateProfileFormResponse, ProfileDoesNotExistResponse } from "../error_response";
 import GetProfileParams from "../forms/get_profile_params";
 import UpdateProfileForm from "../forms/update_profile_form";
 import { ProfileDataResponse, ProfileUpdatedSuccessfullyResponse } from "../responses/profile";
@@ -71,7 +71,7 @@ class ProfileController
 
         if(fieldErrors)
         {
-            return;
+            return res.error(new InvalidGetProfileParamsResponse());
         }
 
         req.getProfileParams = params;
