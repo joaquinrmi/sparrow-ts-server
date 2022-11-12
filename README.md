@@ -326,7 +326,7 @@ CheepDoesNotExist | 2000 |
 ```ts
 {
     users: Array<UserCellData>,
-    next: number
+    next: number,
 }
 ```
 
@@ -436,7 +436,13 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
     ```
 * **Respuesta exitosa**
     * ***Status code***: OK.
-    * **Cuerpo**: `UserShortInformation`.
+    * **Cuerpo**
+        ```ts
+        {
+            user: UserShortInformation,
+            token: string,
+        }
+        ```
 * **Errores**:
     * [`InvalidCredentialsResponse`](#invalidcredentialsresponse): ocurre cuando la combinación `handleOrEmail` - `password` no corresponse a ningún usuario registrado.
 
