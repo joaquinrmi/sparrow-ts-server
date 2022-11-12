@@ -303,22 +303,22 @@ CheepDoesNotExist | 2000 |
 #### `UserShortInformation`
 ```ts
 {
-    id: number;
-    handle: string;
-    name: string;
-    picture: string;
+    id: number,
+    handle: string,
+    name: string,
+    picture: string,
 }
 ```
 
 #### `UserCellData`
 ```ts
 {
-    handle: string;
-    name: string;
-    picture: string;
-    description: string;
-    following: boolean;
-    follower: boolean;
+    handle: string,
+    name: string,
+    picture: string,
+    description: string,
+    following: boolean,
+    follower: boolean,
 }
 ```
 
@@ -333,29 +333,29 @@ CheepDoesNotExist | 2000 |
 #### `CheepData`
 ```ts
 {
-    id: number;
-    author: UserShortInformation;
-    dateCreated: number;
-    content: string;
-    gallery: Array<string>;
-    quoteId: number;
-    responseId: number;
-    quoteTarget: CheepData;
-    responseOf: CheepData;
-    comments: number;
-    likes: number;
-    recheeps: number;
-    quotes: number;
-    userLikesIt: boolean;
-    userRecheepedIt: boolean;
+    id: number,
+    author: UserShortInformation,
+    dateCreated: number,
+    content: string,
+    gallery: Array<string>,
+    quoteId: number,
+    responseId: number,
+    quoteTarget: CheepData,
+    responseOf: CheepData,
+    comments: number,
+    likes: number,
+    recheeps: number,
+    quotes: number,
+    userLikesIt: boolean,
+    userRecheepedIt: boolean,
 }
 ```
 
 #### `SearchCheepsResult`
 ```ts
 {
-    cheeps: Array<CheepData>;
-    next: number;
+    cheeps: Array<CheepData>,
+    next: number,
 }
 ```
 
@@ -363,18 +363,18 @@ CheepDoesNotExist | 2000 |
 ```ts
 {
     handle: string,
-    name: string;
-    picture: string;
-    banner: string;
-    description: string;
-    joinDate: number;
-    birthdate: number;
-    location: string;
-    website: string;
-    cheepCount: number;
-    followingCount: number;
-    followersCount: number;
-    following: boolean;
+    name: string,
+    picture: string,
+    banner: string,
+    description: string,
+    joinDate: number,
+    birthdate: number,
+    location: string,
+    website: string,
+    cheepCount: number,
+    followingCount: number,
+    followersCount: number,
+    following: boolean,
 }
 ```
 
@@ -388,8 +388,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        nameOrHandle: string;
-        nextTo?: number;
+        nameOrHandle: string,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -402,11 +402,11 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        handle: string;
-        email: string;
-        password: string;
-        fullName: string;
-        birthdate: number;
+        handle: string,
+        email: string,
+        password: string,
+        fullName: string,
+        birthdate: number,
     }
     ```
 * **Respuesta exitosa**
@@ -430,8 +430,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        handleOrEmail: string;
-        password: string;
+        handleOrEmail: string,
+        password: string,
     }
     ```
 * **Respuesta exitosa**
@@ -460,8 +460,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        userHandle: string;
-        nextTo?: number;
+        userHandle: string,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -476,8 +476,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        userHandle: string;
-        nextTo?: number;
+        userHandle: string,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -492,7 +492,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        nextTo?: number;
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -507,8 +507,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        cheepId: number;
-        nextTo?: number;
+        cheepId: number,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -523,8 +523,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        cheepId: number;
-        nextTo?: number;
+        cheepId: number,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -541,14 +541,14 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        words?: string;
-        userHandle?: string;
-        responses?: boolean;
-        onlyGallery?: boolean;
-        responseOf?: number;
-        quoteTarget?: number;
-        recheepTarget?: number;
-        nextTo?: number;
+        words?: string,
+        userHandle?: string,
+        responses?: boolean,
+        onlyGallery?: boolean,
+        responseOf?: number,
+        quoteTarget?: number,
+        recheepTarget?: number,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -563,10 +563,10 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        responseTarget?: number;
-        quoteTarget?: number;
-        content?: string;
-        gallery?: Array<string>;
+        responseTarget?: number,
+        quoteTarget?: number,
+        content?: string,
+        gallery?: Array<string>,
     }
     ```
 * **Respuesta exitosa**
@@ -582,8 +582,8 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        userHandle: string;
-        nextTo?: number;
+        userHandle: string,
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -598,7 +598,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        nextTo?: number;
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -613,7 +613,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * ***Query params***:
     ```ts
     {
-        nextTo?: number;
+        nextTo?: number,
     }
     ```
 * **Respuesta exitosa**
@@ -676,13 +676,13 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        name?: string;
-        picture?: string;
-        banner?: string;
-        description?: string;
-        birthdate?: number;
-        location?: string;
-        website?: string;
+        name?: string,
+        picture?: string,
+        banner?: string,
+        description?: string,
+        birthdate?: number,
+        location?: string,
+        website?: string,
     }
     ```
 * **Respuesta exitosa**
@@ -708,7 +708,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        image: Buffer;
+        image: Buffer,
     }
     ```
 * **Respuesta exitosa**
@@ -716,7 +716,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
     * **Cuerpo**:
         ```ts
         {
-            imageUrl: string;
+            imageUrl: string,
         }
         ```
 
@@ -726,7 +726,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        image: Buffer;
+        image: Buffer,
     }
     ```
 * **Respuesta exitosa**
@@ -734,7 +734,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
     * **Cuerpo**:
         ```ts
         {
-            imageUrl: string;
+            imageUrl: string,
         }
         ```
 
@@ -744,7 +744,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
 * **Cuerpo de la consulta**:
     ```ts
     {
-        image: Buffer;
+        image: Buffer,
     }
     ```
 * **Respuesta exitosa**
@@ -752,6 +752,6 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
     * **Cuerpo**:
         ```ts
         {
-            imageUrl: string;
+            imageUrl: string,
         }
         ```
