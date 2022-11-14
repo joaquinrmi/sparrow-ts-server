@@ -135,21 +135,21 @@ La documentación de las respuestas exitosas seguirá el siguiente patrón:
 Si ocurre un error al procesar una solicitud en el servidor, entonces se envía un mensaje de error `ErrorResponse` (ver [Lista de `ErrorResponse`](#lista-de-errorresponse)). El objeto `ErrorResponse` consta de dos atributos: un título y una lista de `APIError`. Esto significa que una respuesta de error puede contener varias descripciones de errores diferentes (está garantizado de que, al menos, habrá un error en la lista).
 
 #### ErrorResponse
-```json
+```ts
 {
-    "title": "string",
-    "errors": [ "APIError" ]
+    title: string,
+    errors: APIError[],
 }
 ```
 * `title` es un título general sobre el error.
 * `errors` es un arreglo con objetos de tipo `APIError`.
 
 #### APIError
-```json
+```ts
 {
-    "code": "number",
-    "title": "string",
-    "description": "string"
+    code: number,
+    title: string,
+    description: string,
 }
 ```
 * `code` es el código único que identifica el error (ver [Códigos de error](#códigos-de-error)).
@@ -325,7 +325,7 @@ CheepDoesNotExist | 2000 |
 #### `SearchUserResult`
 ```ts
 {
-    users: Array<UserCellData>,
+    users: UserCellData[],
     next: number,
 }
 ```
@@ -337,7 +337,7 @@ CheepDoesNotExist | 2000 |
     author: UserShortInformation,
     dateCreated: number,
     content: string,
-    gallery: Array<string>,
+    gallery: string[],
     quoteId: number,
     responseId: number,
     quoteTarget: CheepData,
@@ -354,7 +354,7 @@ CheepDoesNotExist | 2000 |
 #### `SearchCheepsResult`
 ```ts
 {
-    cheeps: Array<CheepData>,
+    cheeps: CheepData[],
     next: number,
 }
 ```
@@ -572,7 +572,7 @@ La *User API* es la interfaz con la que se administran las operaciones sobre los
         responseTarget?: number,
         quoteTarget?: number,
         content?: string,
-        gallery?: Array<string>,
+        gallery?: string[],
     }
     ```
 * **Respuesta exitosa**
