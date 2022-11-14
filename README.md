@@ -87,16 +87,16 @@ La aplicación back end está alojada en [https://sparrow-server.onrender.com/](
 1. Ejecutar la aplicación:
     * en un servidor de desarrollo
         ```
-            npm run dev
+        npm run dev
         ```
     o
     1. compilar un paquete de producción
         ```
-            npm run build
+        npm run build
         ```
     1. ejecutar
         ```
-            npm start
+        npm start
         ```
 
 ### Variables de entorno
